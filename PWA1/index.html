@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="icon" type="image/png" href="./images/icon-small.png">
+
+    <title>The best BBQ in Toronto!</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="manifest" href="manifest.json" />
+
+    <link rel="apple-touch-icon" href="./images/icon-small.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  </head>
+  <body>
+    
+    <header class="header">
+        <h1 class="header-title">DANG GOOD TORONTO BBQ</h1>
+        <p class="header-subtitle">THE Top 10 BEST MEAT LOVER Destinations</p>
+    </header>
+
+    <!-- The main view -->
+    <main id="main-view" class="view active">
+        <div class="container">
+            <div id="loading" class="loading">
+                <div class="loading-spinner"></div>
+                <p>Loading the best of the best spots...</p>
+            </div>
+            <div id="locations-grid" class="locations-grid"></div>
+        </div>
+    </main>
+
+    <!-- Detailed view -->
+    <div id="detail-view" class="view">
+        <button id="back-to-list" class="back-button">← Back</button>
+        <div class="container">
+            <div id="detail-content" class="d-content"></div>
+        </div>
+    </div>
+
+    <!-- Favorites View -->
+    <div id="favorites-view" class="view">
+        <button id="back-from-favorites" class="back-button">← Back</button>
+        <div class="container">
+            <h2 class="favorites-title">YOUR Favorite BBQ Spots</h2>
+            <div id="fav-grid" class="locations-grid"></div>
+            <div id="empty-fav" class="empty-right-now" style="display: none;">
+                <p class="empty-icon">X</p>
+                <p class="empty-text">No favorites yet!</p>
+                <p class="empty-subtext">Tap the heart beside any BBQ place to save it here.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- The bottom navbar -->
+    <nav class="bottom-nav">
+        <button id="nav-home" class="nav-button active">
+            <span class="nav-icon">𖠿</span>
+            <span class="nav-label">Home</span>
+        </button>
+        <button id="nav-favorites" class="nav-button">
+            <span class="nav-icon">♥︎</span>
+            <span class="nav-label">Favorites</span>
+        </button>
+    </nav>
+
+    <!-- Sourcing scripts -->
+    <script src="js/locations.js"></script>
+    <script src="js/appcontroller.js"></script>
+</body>
+</html>
